@@ -77,11 +77,14 @@ const displayBooks = (data) => {
     console.log(data)
     const booksContainer = document.getElementById('books-container');
     booksContainer.textContent = '';
+
+    // Hiding the error and result initially
     errorMessage('none')
     resultCount('none')
 
     if (data.numFound === 0) {
 
+        // Dislaying error as no results are found
         errorMessage('block')
 
     } else {
@@ -102,6 +105,8 @@ const displayBooks = (data) => {
             </div>
             `
             booksContainer.appendChild(newDiv);
+
+            // Updating the result counter
             resultCount('block', data.numFound, bookList.length)
         });
     }
