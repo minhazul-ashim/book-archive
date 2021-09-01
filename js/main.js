@@ -17,7 +17,7 @@ const loadData = async (search) => {
 const authorExistence = (book) => {
 
     if (book.author_name !== undefined) {
-        return book.author_name[0];
+        return book.author_name.join(',');
     } else {
         return 'Unknown'
     }
@@ -35,7 +35,7 @@ const firstPublishExist = (book) => {
 const publisherExistence = (book) => {
 
     if (book.publisher !== undefined) {
-        return book.publisher;
+        return book.publisher.join(',');
     } else {
         return 'Unknown'
     }
