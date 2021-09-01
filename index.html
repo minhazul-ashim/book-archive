@@ -27,12 +27,16 @@
 
             <h1 class='text-center text-info'>Book Archive</h1>
 
+            <!-- Search Input Field -->
+
             <div class="input-group mb-3">
                 <input id='search-input' type="text" class="form-control" placeholder="Search your desired book"
                     aria-label="book-search" aria-describedby="button-addon2">
                 <button onclick="getSearchText()" class="btn btn-outline-secondary" type="button" id="button-addon2"><i
                         class="fas fa-search"></i></button>
             </div>
+
+            <!-- Result and Error Message -->
 
             <h5 id='result-count' class='text-center text-success my-3'><span id="total-result">00</span> results found.
                 <span id="shown-result">00</span>
@@ -48,6 +52,9 @@
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,9 +1,15 @@
+// Function for getting the search input text
+
 const getSearchText = () => {
 
+    const searchInput = document.getElementById('search-input');
     let searchText = document.getElementById('search-input').value;
 
+    searchInput.value = null;
     loadData(searchText);
 }
+
+// Function for loading the data
 
 const loadData = async (search) => {
 
@@ -14,6 +20,8 @@ const loadData = async (search) => {
 
 }
 
+// Function for checking if the object has the author info;
+
 const authorExistence = (book) => {
 
     if (book.author_name !== undefined) {
@@ -22,6 +30,8 @@ const authorExistence = (book) => {
         return 'Unknown'
     }
 }
+
+// Function for checking if the object has first publish year info;
 
 const firstPublishExist = (book) => {
 
@@ -32,6 +42,8 @@ const firstPublishExist = (book) => {
     }
 };
 
+// Function for checking if the object has the publisher info
+
 const publisherExistence = (book) => {
 
     if (book.publisher !== undefined) {
@@ -41,6 +53,8 @@ const publisherExistence = (book) => {
     }
 }
 
+// Function for counting the total results found
+
 const resultCount = (dis, total, shown) => {
 
     document.getElementById('total-result').innerText = total;
@@ -48,10 +62,14 @@ const resultCount = (dis, total, shown) => {
     document.getElementById('result-count').style.display = dis;
 }
 
+// Function for displaying the error message case;
+
 const errorMessage = (dis) => {
 
     document.getElementById('no-result').style.display = dis;
 }
+
+// Function for update and displaying the UI
 
 const displayBooks = (data) => {
 
